@@ -1,0 +1,25 @@
+<div class="ui text menu">
+    {% if product.acceptedReviews|length != 0 %}
+        <div class="ui labeled button" tabindex="0">
+            <a class="ui yellow button" href="{{ path('sylius_shop_product_review_create', {'slug': product.slug, '_locale': product.translation.locale}) }}">
+                <i class="star icon"></i> {{ 'sylius.ui.add_your_review'|trans }}
+            </a>
+            <a class="ui basic yellow left pointing label" href="{{ path('sylius_shop_product_review_index', {'slug': product.slug, '_locale': product.translation.locale}) }}">
+                {{ product.acceptedReviews|length }} Avis
+            </a>
+        </div>
+        <div class="item">
+            {% include '@SyliusShop/Product/_starRating.html.twig' %}
+        </div>
+    {% else %}
+        <a class="ui yellow button" href="{{ path('sylius_shop_product_review_create', {'slug': product.slug, '_locale': product.translation.locale}) }}">
+            <i class="star icon"></i> {{ 'sylius.ui.add_your_review'|trans }}
+        </a>
+    {% endif %}
+
+    {% if product.updatedAt %}
+        <span class="item"> mise à jour : {{ product.updatedAt|date("m/d/Y", "Europe/Paris") }}</span>
+    {% else %}
+        <span class="item">crée le :{{ product.createdAt|date("m/d/Y", "Europe/Paris") }}</span>
+    {% endif %}
+</div>

@@ -1,0 +1,60 @@
+@font-face {
+    font-family: CatCafe;
+    src: url("../font/CatCafe.ttf");
+}
+
+* {
+    font-family: CatCafe;
+}
+
+.ui.menu .item{
+    background: #FFFFBA;
+}
+
+.ui.menu .active.item{
+    background: #D291BC;
+}
+
+.ui.menu .dropdown.item .menu {
+    background: #FEC8D8;
+}
+
+.ui.monster.header {
+    font-size: 2.3em;
+}
+
+.ui.inverted.menu {
+    background: #EE989A;
+}
+
+.flex-security {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.security {
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 100px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    margin: 25px;
+}
+
+.ui.inverted.segment, .ui.primary.inverted.segment {
+    background: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .ui.small.image, .ui.small.images .image, .ui.small.images img, .ui.small.images svg {
+        width: 38px;
+        height: 38px;
+    }
+}

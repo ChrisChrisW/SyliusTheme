@@ -1,0 +1,15 @@
+{
+  "name": "acme/christophe-theme",
+  "description": "learn sylius",
+  "authors": [
+    {
+      "name": "Christophe Wang",
+      "email": "cours.christophe@gmail.com"
+    }
+  ],
+  "extra": {
+    "sylius-theme": {
+      "title": "Christophe Theme"
+    }
+  }
+}

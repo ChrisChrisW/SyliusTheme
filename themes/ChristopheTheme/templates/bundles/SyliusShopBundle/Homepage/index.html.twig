@@ -1,0 +1,17 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block content %}
+    <div class="homepage">
+        <div class="ui hidden divider"></div>
+
+        {% include "@SyliusShop/Homepage/_banner.html.twig" %}
+        {% include "@SyliusShop/Homepage/_latestProducts.html.twig" %}
+        {% include "@SyliusShop/Homepage/_latestProductsCarousel.html.twig" %}
+        {% include "@SyliusShop/Homepage/_aboutUs.html.twig" %}
+        {% include "@SyliusShop/Homepage/_productsGrid.html.twig" %}
+        {% include "@SyliusShop/Homepage/_newsletter.html.twig" %}
+        {% include "@SyliusShop/Homepage/_security.html.twig" %}
+
+{#  {{ sylius_template_event('sylius.shop.homepage') }}#}
+    </div>
+{% endblock %}
